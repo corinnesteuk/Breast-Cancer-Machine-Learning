@@ -104,3 +104,5 @@ output = pd.DataFrame(ar, index = ["Train", "Development", "Test"], columns = ['
 print(output)
 
 output.to_csv("Logistic Regression Accuracy Output")
+
+# Final test accuracy: .9824561403508771
