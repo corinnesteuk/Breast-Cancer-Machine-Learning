@@ -126,3 +126,4 @@ GRID SEARCH RESULTS:
 >0.951 with: {'eta0': 1000.0, 'max_iter': 10000, 'penalty': 'l1'}
 >0.860 with: {'eta0': 1000.0, 'max_iter': 10000, 'penalty': 'l2'}
 >0.961 with: {'eta0': 1000.0, 'max_iter': 10000, 'penalty': 'None'}
+
