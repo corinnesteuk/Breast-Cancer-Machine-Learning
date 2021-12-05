@@ -41,7 +41,7 @@ X_test_std = sc.transform(X_test)
 ppn = Perceptron()
 ppn.fit(X_train_std, y_train)
 y_dev_pred = ppn.predict(X_dev_std)
-print('Default Perceptron Accuracy: %.3f' % accuracy_score(y_dev, y_dev_pred))  #accuracy: 0.971 %
+print('Default Perceptron Accuracy: %.3f' % accuracy_score(y_dev, y_dev_pred))  #accuracy: 0.971
 
 
 
@@ -61,13 +61,13 @@ grid_search = GridSearchCV(Perceptron(random_state=1), grid, scoring='accuracy')
 grid_search = grid_search.fit(X_train_std, y_train)
 
 print('Grid Search Best Parameters: ' + str(grid_search.best_params_) )    #best parameters: {'eta0': 0.01, 'max_iter': 100, 'penalty': 'l1'}
-print('Grid Search Best Score %.3f' % grid_search.best_score_)             #best score: 0.977 %
+print('Grid Search Best Score %.3f' % grid_search.best_score_)             #best score: 0.977
 
 #tuned perceptron
 tuned_ppn = grid_search.best_estimator_
 
 grid_dev_pred = tuned_ppn.predict(X_dev_std)
-print('Tuned Perceptron Accuracy: %.3f' % accuracy_score(y_dev, grid_dev_pred))  #accuracy: 0.971 %
+print('Tuned Perceptron Accuracy: %.3f' % accuracy_score(y_dev, grid_dev_pred))  #accuracy: 0.971
 
 
 
@@ -78,7 +78,7 @@ final_ppn = Perceptron(eta0=0.01, max_iter=100, penalty="l1")
 final_ppn.fit(X_std, y)
 
 y_test_pred = final_ppn.predict(X_test_std)
-print('Final Perceptron Accuracy: %.3f' % accuracy_score(y_test, y_test_pred))   #accuracy: 0.991 %
+print('Final Perceptron Accuracy: %.3f' % accuracy_score(y_test, y_test_pred))   #accuracy: 0.991
 
 
 
